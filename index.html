@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<title>
+    Slova u tekstu
+</title>
+
+<style>
+    .bod {
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: orange;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        grid-template-rows: 100px, repeat(4, 1fr);
+    }
+
+    .typed {
+        justify-self: center;
+        grid-column-start: 2;
+    }
+    .typed h1 {
+        overflow: hidden;
+        border-right: .15em solid black;
+        white-space: nowrap; 
+        width: min-content;
+        letter-spacing: .15em; 
+        animation: 
+            type 2s steps(40, end),
+            blinky .75s step-end infinite;
+    }
+    @keyframes type {
+        from { width: 0 }
+        to { width: 100% }
+    }
+    @keyframes blinky {
+        from, to { border-color: transparent }
+        50% { border-color: black; }
+    }
+
+    .cont {
+        display: grid;
+        height: 500px;
+        grid-column-start: span 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    .txt {
+        border-radius: 10px;
+        border-bottom-right-radius: 0px;
+        border: none;
+        box-shadow: 1px 1px 20px rgb(255, 220, 155);
+        padding: 10px;
+        height: 125%;
+    }
+    
+    .right {
+        background-color: white;
+        border-top-left-radius: 40px;
+        border-bottom-left-radius: 40px;
+        position: absolute;
+        top: 10%;
+        right: 0px;
+        width: 30%;
+        height: 80%;
+        box-shadow: 1px 1px 30px rgb(255, 220, 155);
+        color: black;
+        padding: 10px;
+    }
+    .right p {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+    }
+</style>
+
+<body class="bod">
+    <div class="right">
+        <h1 style="font-weight: lighter;">
+            Broj karaktera
+        </h1>
+    </div>
+    <div class="typed">
+        <h1>
+            Broj slova u tekstu
+        </h1>
+    </div>
+    <div class="cont">
+        <textarea placeholder="Unesite tekst..." class="txt"></textarea>
+    </div>
+    <script src="counter.js"></script>
+</body>
