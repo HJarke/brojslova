@@ -9,7 +9,7 @@ let para = document.createElement("p");
 para.textContent = "Ukupno: " + arra.length + "  Ukupno reci: 0";
 right.appendChild(para);
 let para2 = document.createElement("p");
-para2.textContent = "asd";
+para2.textContent = "";
 right.appendChild(para2);
 
 txt.addEventListener("input", () => {
