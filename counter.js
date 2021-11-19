@@ -15,7 +15,7 @@ right.appendChild(para2);
 txt.addEventListener("input", () => {
     para2.innerHTML = "";
     let str = (txt.value).toUpperCase();
-    str.join("\n");
+    str = str.replace(/\n/g, " ");
     arra = str.split(" ");
     let arraChars = new Set(str);
     arraChars.forEach((value) => {
