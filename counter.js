@@ -3,7 +3,7 @@ const right = document.querySelector(".right");
 
 
 let arra = [];
-const pun = `[!"#$%&'()*“”+,-./:;´<=>?@[^_{|}~] ` + "`\\" + "\n";
+const pun = `[!"#$%&'()*“”+,-./:;´<=>?@[^_{|}~] ` + "`\\";
 const punn = pun.split("");
 let para = document.createElement("p");
 para.textContent = "Ukupno: " + arra.length + "  Ukupno reci: 0";
@@ -15,6 +15,7 @@ right.appendChild(para2);
 txt.addEventListener("input", () => {
     para2.innerHTML = "";
     let str = (txt.value).toUpperCase();
+    str.join("\n");
     arra = str.split(" ");
     let arraChars = new Set(str);
     arraChars.forEach((value) => {
