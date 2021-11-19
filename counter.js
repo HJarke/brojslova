@@ -3,7 +3,7 @@ const right = document.querySelector(".right");
 
 
 let arra = [];
-const pun = `[!"#$%&'()*“”+,-./:;´<=>?@[^_{|}~] ’` + "`\\";
+const pun = `[!"#$%&'()*“”+,-./:;´<=>?@[^_{|}~]’ ` + "`\\";
 const punn = pun.split("");
 let para = document.createElement("p");
 para.textContent = "Ukupno: " + arra.length + "  Ukupno reci: 0";
